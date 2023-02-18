@@ -29,16 +29,16 @@ public class EmpresaController {
 	// http://localhost:9001/EmpresaController/listar
 	@GetMapping("listar") // mostrar los registros de nuestra BD
 	public List<Empresa> listar() {
-
+		
 		var lista = empresaServ.listar();
 		/*
-		 DEBUG: trazas de la aplicación en depuración
-INFO: información
-WARN: advertencia (posible fallo)
-ERROR: error del sistema
-FATAL: error bloqueante que puede tener efectos secundarios en el sistema (por ejemplo, 
-no poder conectarnos a una base de datos generará probablemente un bloqueo de muchas funcionalidades del sistema)
-		 */
+		DEBUG: trazas de la aplicación en depuración 
+		INFO: información
+		WARN: advertencia (posible fallo)
+		ERROR: error del sistema
+		FATAL: error bloqueante que puede tener efectos secundarios en el sistema (por ejemplo, 
+		no poder conectarnos a una base de datos generará probablemente un bloqueo de muchas funcionalidades del sistema)
+		*/
 		//UTILIZA LOG4J
 		//PODEMOS HACER UNA CONDICIONAL DE IF PARA INFORME DE ERRORES
 		logger.info("mensaje de info"+lista);
